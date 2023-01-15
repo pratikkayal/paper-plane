@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 
+console.log("REACT_APP_OSKY_USERNAME: ",process.env.REACT_APP_OSKY_USERNAME); 
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
