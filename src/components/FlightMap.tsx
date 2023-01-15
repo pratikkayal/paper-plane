@@ -13,7 +13,7 @@ import { Constants } from './../mapbox';
 import { IStateVectorData, IAircraftTrack, IMapGeoBounds } from './../opensky';
 import { SettingKeys } from './../views/SettingsView';
 
-import FlightIcon from './../resources/flight-24px.svg';
+import FlightIcon from './../resources/Paper-plane_1.svg';
 import FlightLandIcon from './../resources/flight_land-24px.svg';
 import FlightLandFlippedIcon from './../resources/flight_land-24px_flippedx.svg';
 import FlightTakeoffIcon from './../resources/flight_takeoff-24px.svg';
@@ -158,8 +158,9 @@ const FlightMap: React.FC<Props> = (props) => {
 
       const icao24 = selectedFeature.properties['icao24'] as string;
       if (icao24)
-        if (props.onTrackAircraft)
-          props.onTrackAircraft(icao24);
+        if (props.onTrackAircraft){
+          console.log('onTrackAircraft', icao24);
+          props.onTrackAircraft(icao24);}
     }
   };
 

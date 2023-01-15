@@ -1,4 +1,5 @@
-import { ReactComponent as FlightIcon } from './../resources/flight-24px.svg';
+// import { ReactComponent as FlightIcon } from './../resources/flight-24px.svg';
+import { ReactComponent as FlightIcon } from './../resources/Paper-plane_1.svg';
 import { ReactComponent as FlightLandIcon } from './../resources/flight_land-24px.svg';
 import { ReactComponent as FlightLandFlippedIcon } from './../resources/flight_land-24px_flippedx.svg';
 import { ReactComponent as FlightTakeoffIcon } from './../resources/flight_takeoff-24px.svg';

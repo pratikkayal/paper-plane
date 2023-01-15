@@ -31,7 +31,7 @@ const RouterPage: React.FC<Props> = (props) => {
   const [selectableMenuItems, setSelectableMenuItems] = useState<Array<ISelectableProps>>([
     ViewNavigationElements[ViewKeys.SettingsView],
     ViewNavigationElements[ViewKeys.LogView],
-    ViewNavigationElements[ViewKeys.AboutView]
+    // ViewNavigationElements[ViewKeys.AboutView]
   ]);
 
   // Refs

@@ -144,7 +144,7 @@ const AircraftLayer: React.FC<Props> = (props) => {
         const isOnGround = stateVector.on_ground;
 
         // Claculate color
-        var color = getColor(altitude);
+        var color = getColor(altitude); // Coloring by altitude
         if (isOnGround)
           color = styleTheme.palette.text.secondary;
         if (isSelected)
