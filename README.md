@@ -3,7 +3,7 @@ An open-source project written with React and TypeScript.
 
 The goal of this project is to read the data from [OpenSky Network](https://opensky-network.org/) and visualize it on a map.
 
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) 
 
 ![](docs/react-flight-tracker_prview.gif)
 
