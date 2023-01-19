@@ -13,7 +13,9 @@ import { Constants } from './../mapbox';
 import { IStateVectorData, IAircraftTrack, IMapGeoBounds } from './../opensky';
 import { SettingKeys } from './../views/SettingsView';
 
-import FlightIcon from './../resources/Paper-plane_1.svg';
+// import FlightIcon from './../resources/flight-24px.svg';
+// import FlightIcon from './../resources/paper.svg';
+import FlightIcon from './../resources/paper-plane.svg';
 import FlightLandIcon from './../resources/flight_land-24px.svg';
 import FlightLandFlippedIcon from './../resources/flight_land-24px_flippedx.svg';
 import FlightTakeoffIcon from './../resources/flight_takeoff-24px.svg';
@@ -108,26 +110,26 @@ const FlightMap: React.FC<Props> = (props) => {
       if (!map.hasImage('flight-icon'))
         map.addImage('flight-icon', image, { sdf: true });
     });
-    svgToImageAsync(FlightLandIcon, 24, 24).then(image => {
+    // svgToImageAsync(FlightLandIcon, 24, 24).then(image => {
 
-      if (!map.hasImage('flight-land-icon'))
-        map.addImage('flight-land-icon', image, { sdf: true });
-    });
-    svgToImageAsync(FlightLandFlippedIcon, 24, 24).then(image => {
+    //   if (!map.hasImage('flight-land-icon'))
+    //     map.addImage('flight-land-icon', image, { sdf: true });
+    // });
+    // svgToImageAsync(FlightLandFlippedIcon, 24, 24).then(image => {
 
-      if (!map.hasImage('flight-land-flipped-icon'))
-        map.addImage('flight-land-flipped-icon', image, { sdf: true });
-    });
-    svgToImageAsync(FlightTakeoffIcon, 24, 24).then(image => {
+    //   if (!map.hasImage('flight-land-flipped-icon'))
+    //     map.addImage('flight-land-flipped-icon', image, { sdf: true });
+    // });
+    // svgToImageAsync(FlightTakeoffIcon, 24, 24).then(image => {
 
-      if (!map.hasImage('flight-takeoff-icon'))
-        map.addImage('flight-takeoff-icon', image, { sdf: true });
-    });
-    svgToImageAsync(FlightTakeoffFlippedIcon, 24, 24).then(image => {
+    //   if (!map.hasImage('flight-takeoff-icon'))
+    //     map.addImage('flight-takeoff-icon', image, { sdf: true });
+    // });
+    // svgToImageAsync(FlightTakeoffFlippedIcon, 24, 24).then(image => {
 
-      if (!map.hasImage('flight-takeoff-flipped-icon'))
-        map.addImage('flight-takeoff-flipped-icon', image, { sdf: true });
-    });
+    //   if (!map.hasImage('flight-takeoff-flipped-icon'))
+    //     map.addImage('flight-takeoff-flipped-icon', image, { sdf: true });
+    // });
   };
 
   const handleLoad = (e: MapboxEvent<undefined>) => {
@@ -159,7 +161,6 @@ const FlightMap: React.FC<Props> = (props) => {
       const icao24 = selectedFeature.properties['icao24'] as string;
       if (icao24)
         if (props.onTrackAircraft){
-          console.log('onTrackAircraft', icao24);
           props.onTrackAircraft(icao24);}
     }
   };
@@ -239,7 +240,7 @@ const FlightMap: React.FC<Props> = (props) => {
         </Box>
       }
 
-      {props.selectedAircraft &&
+      {/* {props.selectedAircraft &&
         <Box
           sx={{
             position: 'absolute',
@@ -252,12 +253,10 @@ const FlightMap: React.FC<Props> = (props) => {
             selectedAircraft={props.selectedAircraft}
             onRelease={props.onReleaseTrack} />
         </Box>
-      }
+      } */}
 
       <AircraftLayer
-        stateVectors={props.stateVectors}
-        zoom={viewState.zoom}
-        selectedAircraft={props.selectedAircraft} />
+        stateVectors={props.stateVectors}/>
 
     </ReactMap>
   );

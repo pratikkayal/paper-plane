@@ -126,10 +126,10 @@ const AircraftLayer: React.FC<Props> = (props) => {
 
         // Get altitude
         var altitude = stateVector.geo_altitude;
-        if ((altitude === null) || (altitude < 0))
-          altitude = stateVector.baro_altitude;
-        if ((altitude === null) || (altitude < 0))
-          altitude = 0;
+        // if ((altitude === null) || (altitude < 0))
+        //   altitude = stateVector.baro_altitude;
+        // if ((altitude === null) || (altitude < 0))
+        altitude = 10000000;
 
         // Get velocity in km/h
         const velocity = stateVector.velocity ? (stateVector.velocity * 3.6) : -1;
@@ -149,6 +149,7 @@ const AircraftLayer: React.FC<Props> = (props) => {
           color = styleTheme.palette.text.secondary;
         if (isSelected)
           color = styleTheme.palette.primary.main;
+        color = styleTheme.palette.text.secondary
 
         var properties: GeoJsonProperties = {
           ['iconName']: getIconName(isOnGround, verticalRate, altitude, trueTrack),
